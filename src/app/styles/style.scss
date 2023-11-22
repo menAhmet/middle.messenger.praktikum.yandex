@@ -1,7 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 @import "reset";
+@import "_variables";
 
-@import "@/shared/ui/button/button.scss";
+@import "@/shared/ui/button/button";
+@import "@/shared/ui/link/link";
+@import "@/shared/ui/input/input";
+@import "@/shared/ui/form/form";
+@import "@/shared/ui/notFound/notFound";
+
+@import "@/widgets/chat/ui/chatLayout";
+
+@import "authorization";
 
 html {
   font-size: 62.5%;

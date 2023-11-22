@@ -1,0 +1,21 @@
+.auth {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  &__group {
+    margin: 4rem 0 6rem 0;
+  }
+  &__btn {
+    background-color: $primary-brown;
+    &:hover {
+      background-color: $primary-brown-dark;
+    }
+  }
+  &__link {
+    color: $primary-brown;
+    margin-top: 1.2rem;
+  }
+}

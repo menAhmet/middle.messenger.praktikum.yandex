@@ -1,0 +1,15 @@
+{{#> layout }}
+  <section class="auth">
+    <div class="auth__wrap">
+      {{#> form title="Вход"}}
+          <div class="auth__group">
+            {{> input label="Логин" name="login"}}
+            {{> input type="password" label="Пароль" name="password"}}
+          </div>
+
+          {{> button type="submit" label="Авторизоваться" class="auth__btn"}}
+          {{> link to="signup" label="Нет аккаунта?" class="auth__link"}}
+      {{/form}}
+    </div>
+  </section>
+{{/layout}}

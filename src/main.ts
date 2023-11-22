@@ -1,5 +1,5 @@
-import { registerPartials } from './app/providers/index';
-import { pageSelectionByPath } from './app/routes/index';
+import { registerPartials } from './app/providers';
+import { pageSelectionByPath } from './app/routes';
 import './app/styles/style.scss';
 
 const app = () => {

@@ -1,0 +1,10 @@
+.chat {
+  &__wrap {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    height: 100vh;
+  }
+  &__sidebar {
+    border-right: 1px solid $primary-color;
+  }
+}
