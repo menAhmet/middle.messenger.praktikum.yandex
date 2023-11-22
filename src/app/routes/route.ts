@@ -2,12 +2,13 @@
 import signIn from '@/pages/signIn/signIn.hbs';
 import signUp from '@/pages/signUp/signUp.hbs';
 import chat from '@/pages/chat/chat.hbs';
+import profile from '@/pages/profile/profile.hbs';
 
 const routes = {
 	'/': signIn,
 	'/signup': signUp,
-	'/signup': signUp,
 	'/chat': chat,
+	'/profile': profile,
 };
 
 export const pageSelectionByPath = (pagePath: string) => {

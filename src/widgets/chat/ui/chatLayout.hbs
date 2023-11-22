@@ -1,6 +1,18 @@
 <section class='chat'>
 	<div class='chat__wrap'>
-		<div class='chat__sidebar'>chat__sidebar</div>
-		<div class='chat__body'>chat__body</div>
+		<div class='chat__sidebar'>
+      <div class="chat__topbar">
+        {{> link label="Профиль >" to="/profile" class="chat__profile"}}
+        {{> input class="chat__search" label="Поиск"}}
+      </div>
+      <ul class="chat__list">
+        <li>{{> chatItem name="Rick Sanchez" message="wassup" date="12:00"}}</li>
+      </ul>
+    </div>
+		<div class='chat__body'>
+      {{> chatHeader name="Rick Sanchez"}}
+      {{> chatBody}}
+      {{> chatFooter}}
+    </div>
 	</div>
 </section>

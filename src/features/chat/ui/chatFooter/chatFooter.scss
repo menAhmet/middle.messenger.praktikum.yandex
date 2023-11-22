@@ -1,0 +1,4 @@
+.chat-footer {
+  @include chatHeaderAndFooterFlex;
+  border-top: 1px solid $primary-color;
+}

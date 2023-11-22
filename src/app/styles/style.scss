@@ -1,16 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
-@import "reset";
-@import "_variables";
+@import "helpers/reset";
+@import "helpers/_variables";
+@import "helpers/_mixins";
 
 @import "@/shared/ui/button/button";
 @import "@/shared/ui/link/link";
 @import "@/shared/ui/input/input";
 @import "@/shared/ui/form/form";
 @import "@/shared/ui/notFound/notFound";
+@import "@/shared/ui/textarea/textarea";
+@import "@/shared/ui/avatar/avatar";
+
+@import "@/features/chat/ui/chatFooter/chatFooter";
+@import "@/features/chat/ui/chatHeader/chatHeader";
+@import "@/features/chat/ui/chatBody/chatBody";
+@import "@/features/chat/ui/chatItem/chatItem";
 
 @import "@/widgets/chat/ui/chatLayout";
+@import "@/widgets/profile/ui/profile";
 
-@import "authorization";
+@import "partials/authorization";
 
 html {
   font-size: 62.5%;
