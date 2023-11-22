@@ -1,2 +1,5 @@
-[build]
-  publish = "dist"
+[[redirects]]
+  force = true
+  from = "/*"
+  to = "/index.html"
+  status = 200
