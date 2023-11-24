@@ -1,16 +1,7 @@
-import { registerPartials } from './app/providers';
-import { pageSelectionByPath } from './app/routes';
-import './app/styles/style.scss';
-
-const app = () => {
-	registerPartials();
-
-	const location = window.location.pathname;
-
-	document.addEventListener('DOMContentLoaded', () => {
-		const root = document.querySelector('#app') as HTMLElement;
-		root.innerHTML = pageSelectionByPath(location)();
-	});
-};
-
-app();
+document.addEventListener('DOMContentLoaded', () => {
+	const root = document.getElementById('root') as HTMLElement;
+	if (root) {
+		// redirect in signIn page
+		document.location.replace('/src/pages/signIn/signIn.html');
+	}
+});

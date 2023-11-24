@@ -15,11 +15,12 @@
 @import "@/features/chat/ui/chatHeader/chatHeader";
 @import "@/features/chat/ui/chatBody/chatBody";
 @import "@/features/chat/ui/chatItem/chatItem";
+@import "@/features/profile/ui/profileEditList/profileEditList";
 
 @import "@/widgets/chat/ui/chatLayout";
-@import "@/widgets/profile/ui/profile";
 
 @import "partials/authorization";
+@import "partials/profile";
 
 html {
   font-size: 62.5%;
