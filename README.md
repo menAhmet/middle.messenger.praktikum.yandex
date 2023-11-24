@@ -1,4 +1,3 @@
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8bbe4dd7-96d8-4b88-a18e-4be045b460e3/deploy-status)](https://app.netlify.com/sites/awesome-messenger/deploys)
 
 # Супер функциональный мессенджер(MVP) ⚡️
