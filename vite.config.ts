@@ -4,12 +4,11 @@ import handlebars from './vite-plugin-handlebars-precompile';
 
 export default defineConfig({
 	plugins: [handlebars()],
-	root: resolve(__dirname, './'),
 	build: {
 		outDir: 'dist',
 		rollupOptions: {
 			input: {
-				index: resolve(__dirname, './src/index.html'),
+				index: resolve(__dirname, 'index.html'),
 				signin: resolve(__dirname, './src/pages/signIn/signIn.html'),
 				signup: resolve(__dirname, './src/pages/signUp/signUp.html'),
 				chat: resolve(__dirname, './src/pages/chat/chat.html'),
@@ -20,7 +19,7 @@ export default defineConfig({
 	},
 	server: {
 		port: 3000,
-		open: './src/index.html',
+		open: './index.html',
 	},
 	resolve: {
 		alias: {
