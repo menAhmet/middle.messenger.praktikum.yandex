@@ -15,7 +15,6 @@
     img {
       transform: rotate(180deg);
     }
-
   }
 
   &__body {
@@ -40,7 +39,6 @@
     &:hover {
       background-color: $primary-brown-dark;
     }
-
   }
 
   &__input {
@@ -52,7 +50,6 @@
     &::placeholder {
       text-align: right;
     }
-
   }
 
   &-item {
@@ -66,11 +63,9 @@
     &:not(:last-child) {
       border-bottom: 1px solid $primary-color;
     }
-
   }
 
   &-name {
     color: $primary-grey;
   }
-
 }
