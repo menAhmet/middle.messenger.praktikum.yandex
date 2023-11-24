@@ -1,11 +1,10 @@
-import Component from '@/shared/utils/Component';
-import template from './signUp.hbs';
-export class SignUpPage extends Component {
-	constructor() {
-		super({});
-	}
+import '@/app/styles/style.scss';
+import signUp from './signUp.hbs';
+import { registerPartials } from '@/app/providers';
 
-	protected render(): DocumentFragment {
-		return this.compile(template, this.props);
-	}
-}
+registerPartials();
+
+document.addEventListener('DOMContentLoaded', () => {
+	const root = document.getElementById('signUp') as HTMLElement;
+	root.innerHTML = signUp();
+});

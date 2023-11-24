@@ -1,12 +1,10 @@
-import Component from '@/shared/utils/Component';
-import template from './signIn.hbs';
+import '@/app/styles/style.scss';
+import signIn from './signIn.hbs';
+import { registerPartials } from '@/app/providers';
 
-export class SignInPage extends Component {
-	constructor() {
-		super({});
-	}
+registerPartials();
 
-	protected render(): DocumentFragment {
-		return this.compile(template, this.props);
-	}
-}
+document.addEventListener('DOMContentLoaded', () => {
+	const root = document.getElementById('signIn') as HTMLElement;
+	root.innerHTML = signIn();
+});
