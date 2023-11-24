@@ -3,13 +3,13 @@
     <div class="auth__wrap">
       {{#> form title="Регистрация"}}
           <div class="auth__group">
-            {{> input label="Почта" type="email" name="email"}}
-            {{> input label="Логин" name="login"}}
-            {{> input label="Имя" name="first_name"}}
-            {{> input label="Фамилия" name="second_name"}}
-            {{> input label="Телефон" type="tel" name="phone"}}
-            {{> input type="password" label="Пароль" name="password"}}
-            {{> input type="password" label="Пароль (ещё раз)" name="password"}}
+            {{> input placeholder="Почта" type="email" name="email"}}
+            {{> input placeholder="Логин" name="login"}}
+            {{> input placeholder="Имя" name="first_name"}}
+            {{> input placeholder="Фамилия" name="second_name"}}
+            {{> input placeholder="Телефон" type="tel" name="phone"}}
+            {{> input type="password" placeholder="Пароль" name="password"}}
+            {{> input type="password" placeholder="Пароль (ещё раз)" name="password"}}
           </div>
 
           {{> button type="submit" label="Зарегистрироваться" class="auth__btn"}}
