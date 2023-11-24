@@ -9,7 +9,7 @@ export default defineConfig({
 		outDir: 'dist',
 		rollupOptions: {
 			input: {
-				index: resolve(__dirname, './index.html'),
+				index: resolve(__dirname, './src/index.html'),
 				signin: resolve(__dirname, './src/pages/signIn/signIn.html'),
 				signup: resolve(__dirname, './src/pages/signUp/signUp.html'),
 				chat: resolve(__dirname, './src/pages/chat/chat.html'),
@@ -20,7 +20,7 @@ export default defineConfig({
 	},
 	server: {
 		port: 3000,
-		open: '/src/pages/signIn/signIn.html',
+		open: './src/index.html',
 	},
 	resolve: {
 		alias: {
