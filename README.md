@@ -1,6 +1,9 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8bbe4dd7-96d8-4b88-a18e-4be045b460e3/deploy-status)](https://app.netlify.com/sites/awesome-messenger/deploys)
+
 # Супер функциональный мессенджер ⚡️
 
 ## Клонирования для локальной разработки
+
 ```bash
 git clone https://github.com/menAhmet/middle.messenger.praktikum.yandex.git
 cd middle.messenger.praktikum.yandex
@@ -10,14 +13,19 @@ yarn run install && yarn run dev
 ## Запуск
 
 ### Запуск дев контура:
+
 ```bash
 yarn run dev
 ```
+
 ### Сборка бандла для продакшина:
+
 ```bash
 yarn run build
 ```
+
 ### Сборка и запуск локального продакшн сервера:
+
 ```bash
 yarn run start
 ```
@@ -26,10 +34,14 @@ yarn run start
 
 [http://localhost:3000/](http://localhost:3000/)
 
-## Доступный страницы:
+## Развернутый прод:
 
-страница Авторизации: [/signin](http://localhost:3000/)
+[https://awesome-messenger.netlify.app]
 
-страница Регистрации: [/signup](http://localhost:3000/signup)
+## Доступные страницы:
 
-страница Чата: [/chat](http://localhost:3000/chat)
+страница Авторизации: [/signin](http://localhost:3000/src/pages/signIn/signIn.html):
+страница Регистрации: [/signup](http://localhost:3000/src/pages/signUp/signUp.html):
+страница Чата: [/chat](http://localhost:3000/src/pages/chat/chat.html):
+страница Профиля: [/profile](http://localhost:3000/src/pages/profile/profile.html):
+страница Редактирования Профиля: [/profile](http://localhost:3000/src/pages/profile/profileEdit.html):
