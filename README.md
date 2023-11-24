@@ -34,22 +34,18 @@ yarn run start
 
 [Figma](https://www.figma.com/file/QRgtIj6rivLA3LtRC48M1C/praktikum?type=design&node-id=0%3A1&mode=design&t=4IMmBAXBC0Naj1Ew-1)
 
-## Доступный порт для отслеживания разработки:
-
-[http://localhost:3000/](http://localhost:3000/)
-
 ## Развернутый прод:
 
-[https://awesome-messenger.netlify.app]
+[Netlify](https://awesome-messenger.netlify.app)
+
+## Доступный порт для отслеживания разработки:
+
+[dev](http://localhost:3000/)
 
 ## Доступные страницы:
 
-страница Авторизации: [/signin](http://localhost:3000/src/pages/signIn/signIn.html):
-
-страница Регистрации: [/signup](http://localhost:3000/src/pages/signUp/signUp.html):
-
-страница Чата: [/chat](http://localhost:3000/src/pages/chat/chat.html):
-
-страница Профиля: [/profile](http://localhost:3000/src/pages/profile/profile.html):
-
-страница Редактирования Профиля: [/profile](http://localhost:3000/src/pages/profile/profileEdit.html):
+страница Авторизации: [/signin](http://localhost:3000/src/pages/signIn/signIn.html),
+страница Регистрации: [/signup](http://localhost:3000/src/pages/signUp/signUp.html),
+страница Чата: [/chat](http://localhost:3000/src/pages/chat/chat.html),
+страница Профиля: [/profile](http://localhost:3000/src/pages/profile/profile.html),
+страница Редактирования Профиля: [/profileEdit](http://localhost:3000/src/pages/profile/profileEdit.html),
