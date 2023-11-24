@@ -44,8 +44,12 @@ yarn run start
 
 ## Доступные страницы:
 
-страница Авторизации: [/signin](http://localhost:3000/src/pages/signIn/signIn.html),
-страница Регистрации: [/signup](http://localhost:3000/src/pages/signUp/signUp.html),
-страница Чата: [/chat](http://localhost:3000/src/pages/chat/chat.html),
-страница Профиля: [/profile](http://localhost:3000/src/pages/profile/profile.html),
+страница Авторизации: [/signin](http://localhost:3000/src/pages/signIn/signIn.html)
+
+страница Регистрации: [/signup](http://localhost:3000/src/pages/signUp/signUp.html)
+
+страница Чата: [/chat](http://localhost:3000/src/pages/chat/chat.html)
+
+страница Профиля: [/profile](http://localhost:3000/src/pages/profile/profile.html)
+
 страница Редактирования Профиля: [/profileEdit](http://localhost:3000/src/pages/profile/profileEdit.html)
