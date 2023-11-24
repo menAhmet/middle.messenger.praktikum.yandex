@@ -1,1 +1,0 @@
-export { pageSelectionByPath } from './route';
