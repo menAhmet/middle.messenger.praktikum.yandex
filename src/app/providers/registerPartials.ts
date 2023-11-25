@@ -19,10 +19,12 @@ import chatBody from '@/features/chat/ui/chatBody/chatBody.hbs';
 import chatItem from '@/features/chat/ui/chatItem/chatItem.hbs';
 import profileEditList from '@/features/profile/ui/profileEditList/profileEditList.hbs';
 import profileList from '@/features/profile/ui/profileList/profileList.hbs';
+import profilePasswordList from '@/features/profile/ui/profilePasswordList/profilePasswordList.hbs';
 
 import chatLayout from '@/widgets/chat/ui/chatLayout.hbs';
 import profile from '@/widgets/profile/ui/profile/profile.hbs';
 import profileEdit from '@/widgets/profile/ui/profileEdit/profileEdit.hbs';
+import profilePasswordEdit from '@/widgets/profile/ui/profilePasswordEdit/profilePasswordEdit.hbs';
 
 export const registerPartials = () => {
 	Handlebars.registerPartial('layout', layout);
@@ -42,7 +44,9 @@ export const registerPartials = () => {
 	Handlebars.registerPartial('chatItem', chatItem);
 	Handlebars.registerPartial('profileEditList', profileEditList);
 	Handlebars.registerPartial('profileList', profileList);
+	Handlebars.registerPartial('profilePasswordList', profilePasswordList);
 	Handlebars.registerPartial('profileEdit', profileEdit);
+	Handlebars.registerPartial('profilePasswordEdit', profilePasswordEdit);
 	Handlebars.registerPartial('profile', profile);
 	Handlebars.registerPartial('chatLayout', chatLayout);
 };

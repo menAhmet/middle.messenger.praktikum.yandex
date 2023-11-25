@@ -14,6 +14,10 @@ export default defineConfig({
 				chat: resolve(__dirname, './src/pages/chat/chat.html'),
 				profile: resolve(__dirname, './src/pages/profile/profile.html'),
 				profileEdit: resolve(__dirname, './src/pages/profile/profileEdit.html'),
+				profilePasswordEdit: resolve(
+					__dirname,
+					'./src/pages/profile/profilePasswordEdit.html'
+				),
 			},
 		},
 	},
