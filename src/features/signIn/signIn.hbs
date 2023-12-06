@@ -1,0 +1,16 @@
+{{#> layout }}
+  <section class="auth">
+    <div class="auth__wrap">
+      {{#> form title="Вход"}}
+          <div class="auth__group">
+            {{> input placeholder="Логин" name="login"}}
+            {{> input type="password" placeholder="Пароль" name="password"}}
+          </div>
+
+          {{> button type="submit" label="Авторизоваться" class="auth__btn"}}
+          {{> link to="/src/pages/signUp/signUp.html" label="Нет аккаунта?" class="auth__link"}}
+          {{> link to="/src/pages/chat/chat.html" label="Перейти в Чат" class="auth__link"}}
+      {{/form}}
+    </div>
+  </section>
+{{/layout}}

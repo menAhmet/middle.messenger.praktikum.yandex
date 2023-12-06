@@ -1,0 +1,9 @@
+.chat-header {
+  @include chatHeaderAndFooterFlex;
+  border-bottom: 1px solid $primary-color;
+  &__name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,14 @@
+.profile-edit {
+  margin-top: 6rem;
+
+  &__link {
+    text-align: left;
+    font-size: 1.4rem;
+  }
+  &__change {
+    color: $primary-color;
+  }
+  &__exit {
+    color: $primary-red;
+  }
+}

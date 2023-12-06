@@ -1,0 +1,60 @@
+.profile {
+  &__wrap {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+  }
+  &__back {
+    cursor: pointer;
+    background-color: $primary-color-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      transform: rotate(180deg);
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 5rem auto;
+  }
+  &__save {
+    background-color: $primary-brown;
+    margin-top: 6rem;
+    &:hover {
+      background-color: $primary-brown-dark;
+    }
+  }
+  &__input {
+    background: none;
+    border: none;
+    text-align: center;
+    height: 30px;
+    &::placeholder {
+      text-align: right;
+    }
+  }
+  &-item {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 500;
+    &:not(:last-child) {
+      border-bottom: 1px solid $primary-color;
+    }
+  }
+  &-name {
+    color: $primary-grey;
+  }
+}

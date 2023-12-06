@@ -1,0 +1,14 @@
+.input {
+  height: 4rem;
+  font-size: 1.4rem;
+  width: 100%;
+  border-bottom: 1px solid $primary-color;
+}
+.label {
+  display: block;
+  color: $primary-grey;
+  font-size: 1.4rem;
+  & + & {
+    margin-top: 1.5rem;
+  }
+}
