@@ -1,26 +1,25 @@
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
-@import "helpers/reset";
-@import "helpers/_variables";
-@import "helpers/_mixins";
+@import 'helpers/reset';
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
 
-@import "@/shared/ui/button/button";
-@import "@/shared/ui/link/link";
-@import "@/shared/ui/input/input";
-@import "@/shared/ui/notFound/notFound";
-@import "@/shared/ui/textarea/textarea";
-@import "@/shared/ui/avatar/avatar";
+@import '@/shared/ui/button/button';
+@import '@/shared/ui/link/link';
+@import '@/shared/ui/input/input';
+@import '@/shared/ui/notFound/notFound';
+@import '@/shared/ui/textarea/textarea';
+@import '@/shared/ui/avatar/avatar';
 
-@import "@/features/chat/ui/chatFooter/chatFooter";
-@import "@/features/chat/ui/chatHeader/chatHeader";
-@import "@/features/chat/ui/chatBody/chatBody";
-@import "@/features/chat/ui/chatItem/chatItem";
-@import "@/features/profile/ui/profileEditList/profileEditList";
+@import '@/features/chat/ui/chatFooter/chatFooter';
+@import '@/features/chat/ui/chatHeader/chatHeader';
+@import '@/features/chat/ui/chatBody/chatBody';
+@import '@/features/chat/ui/chatItem/chatItem';
+@import '@/features/profile/ui/profileEditList/profileEditList';
 
-@import "@/widgets/chat/ui/chatLayout";
+@import '@/widgets/chat/ui/chatLayout';
 
-@import "partials/authorization";
-@import "partials/profile";
-@import "partials/form";
+@import 'partials/authorization';
+@import 'partials/profile';
+@import 'partials/form';
 
 html {
   font-size: 62.5%;
@@ -28,7 +27,7 @@ html {
 }
 
 body {
-  font-family: "Inter";
+  font-family: system-ui;
   background-color: #f1f8fb;
   color: #000;
   font-size: 10px;

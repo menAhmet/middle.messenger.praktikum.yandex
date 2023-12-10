@@ -4,33 +4,40 @@
     grid-template-columns: 300px 1fr;
     height: 100vh;
   }
+
   &__sidebar {
     border-right: 1px solid $primary-color;
     padding: 0 1rem;
     overflow-y: hidden;
   }
+
   &__body {
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+
   &__list {
     overflow-y: scroll;
     height: 100%;
   }
+
   &__topbar {
     padding-bottom: 1.5rem;
     text-align: right;
   }
+
   &__search {
     background: none;
     text-align: center;
     border-radius: 5px;
     border: 1px solid $primary-color;
   }
+
   &__profile {
     display: inline-block;
     padding: 2.8rem 0;
   }
+
 }

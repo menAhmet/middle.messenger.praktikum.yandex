@@ -1,10 +1,11 @@
 .form {
   border-radius: 12px;
   border: 2px solid $primary-color;
-  background-color: $White;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
+  background-color: $white;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.14);
   width: 340px;
   padding: 3rem;
+
   &__title {
     text-align: center;
     font-size: 2rem;
