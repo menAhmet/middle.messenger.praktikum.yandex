@@ -49,7 +49,7 @@ class Component {
 		return { props, children };
 	}
 
-	_addEvents() {
+	private _addEvents() {
 		const { events = {} } = this.props as {
 			events: Record<string, () => void>;
 		};
@@ -59,7 +59,21 @@ class Component {
 		});
 	}
 
-	_registerEvents(eventBus: EventBus) {
+	private _removeEvents() {
+		const { events = {} } = this.props as {
+			events: Record<string, () => void>;
+		};
+		if (this._element) {
+			Object.keys(events).forEach((eventName) => {
+				(this._element as HTMLElement).removeEventListener(
+					eventName,
+					events[eventName]
+				);
+			});
+		}
+	}
+
+	private _registerEvents(eventBus: EventBus) {
 		eventBus.on(Component.EVENTS.INIT, this._init.bind(this));
 		eventBus.on(Component.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
 		eventBus.on(Component.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
@@ -114,6 +128,8 @@ class Component {
 
 		const newElement = fragment.firstElementChild as HTMLElement;
 
+		this._removeEvents();
+
 		if (this._element) {
 			this._element.replaceWith(newElement);
 		}
@@ -123,10 +139,10 @@ class Component {
 		this._addEvents();
 	}
 
-	protected compile(template: (context: Props) => string, context) {
-		const contextAndStubs = { ...context, __refs: this.refs };
+	protected compile(template: (context: Component) => string, context: Props) {
+		const contextAndStubs = { ...context, __refs: this.refs, __children: [] };
 
-		const html = template(contextAndStubs);
+		const html = template(contextAndStubs as never);
 
 		const temp = document.createElement('template');
 
@@ -149,7 +165,7 @@ class Component {
 		return this.element;
 	}
 
-	_makePropsProxy(
+	private _makePropsProxy(
 		props: { [index: string | symbol]: unknown },
 		self: Component
 	) {
