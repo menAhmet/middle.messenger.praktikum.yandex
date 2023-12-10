@@ -15,7 +15,6 @@
 		"no-console": "warn",
 		"prefer-const": "error",
 		"quotes": ["warn", "single"],
-		"indent": ["warn", 2],
 		"semi": ["warn", "always"]
 	}
 }

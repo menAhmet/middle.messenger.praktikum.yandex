@@ -89,13 +89,13 @@ class Component {
 		this._eventBus().emit(Component.EVENTS.FLOW_CDM);
 	}
 
-	private _componentDidUpdate(oldProps: Props, newProps: Props) {
-		if (this.componentDidUpdate(oldProps, newProps)) {
+	private _componentDidUpdate() {
+		if (this.componentDidUpdate()) {
 			this._eventBus().emit(Component.EVENTS.FLOW_RENDER);
 		}
 	}
 
-	protected componentDidUpdate(_oldProps: Props, _newProps: Props) {
+	protected componentDidUpdate() {
 		return true;
 	}
 
@@ -123,7 +123,7 @@ class Component {
 		this._addEvents();
 	}
 
-	protected compile(template: (context: Props) => string, context: any) {
+	protected compile(template: (context: Props) => string, context) {
 		const contextAndStubs = { ...context, __refs: this.refs };
 
 		const html = template(contextAndStubs);
