@@ -17,7 +17,7 @@ export const validateEmailWithRegx = (value: string): string => {
 };
 
 export const validateNameWithRegx = (value: string): string => {
-	return /^[а-яА-Яa-zA-Z][а-яa-z\-]*$/.test(value)
+	return /^[а-яА-Яa-zA-Z][а-яa-z-]*$/.test(value)
 		? ''
 		: 'может содержать латиницу или кириллицу!';
 };
@@ -27,5 +27,5 @@ export const validatePhoneWithRegx = (value: string): string => {
 };
 
 export const validateSearchWithRegx = (value: string): string => {
-	return /^[a-zA-Z][a-z\-]*$/.test(value) ? '' : 'может содержать латиницу!';
+	return /^[a-zA-Z][a-z-]*$/.test(value) ? '' : 'может содержать латиницу!';
 };
