@@ -12,6 +12,7 @@
 
   &__btn {
     background-color: $primary-brown;
+
     &:hover {
       background-color: $primary-brown-dark;
     }
@@ -27,6 +28,7 @@
     color: $primary-red;
     font-size: 1.1rem;
     margin-top: 0.5rem;
+
     &.error {
       display: block;
     }
