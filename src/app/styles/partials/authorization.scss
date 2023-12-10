@@ -5,19 +5,23 @@
     justify-content: center;
     height: 100vh;
   }
+
   &__group {
-    margin: 4rem 0 6rem 0;
+    margin: 4rem 0 6rem;
   }
+
   &__btn {
     background-color: $primary-brown;
     &:hover {
       background-color: $primary-brown-dark;
     }
   }
+
   &__link {
     color: $primary-brown;
     margin-top: 1.2rem;
   }
+
   &__error {
     display: none;
     color: $primary-red;
