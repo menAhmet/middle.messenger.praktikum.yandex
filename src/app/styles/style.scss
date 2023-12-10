@@ -6,7 +6,6 @@
 @import "@/shared/ui/button/button";
 @import "@/shared/ui/link/link";
 @import "@/shared/ui/input/input";
-@import "@/shared/ui/form/form";
 @import "@/shared/ui/notFound/notFound";
 @import "@/shared/ui/textarea/textarea";
 @import "@/shared/ui/avatar/avatar";
@@ -21,6 +20,7 @@
 
 @import "partials/authorization";
 @import "partials/profile";
+@import "partials/form";
 
 html {
   font-size: 62.5%;

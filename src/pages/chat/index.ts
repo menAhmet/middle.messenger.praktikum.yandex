@@ -1,10 +1,11 @@
-import '@/app/styles/style.scss';
-import chat from './chat.hbs';
-import { registerPartials } from '@/app/providers';
+import Component from '@/shared/utils/Component';
+import template from './chat.hbs';
+export class ChatPage extends Component {
+	constructor() {
+		super({});
+	}
 
-registerPartials();
-
-document.addEventListener('DOMContentLoaded', () => {
-	const root = document.getElementById('chat') as HTMLElement;
-	root.innerHTML = chat();
-});
+	protected render(): DocumentFragment {
+		return this.compile(template, this.props);
+	}
+}
