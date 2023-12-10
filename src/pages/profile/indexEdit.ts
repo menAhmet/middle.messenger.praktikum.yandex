@@ -1,10 +1,12 @@
-import '@/app/styles/style.scss';
-import profileEdit from './profileEdit.hbs';
-import { registerPartials } from '@/app/providers';
+import Component from '@/shared/utils/Component';
+import template from './profileEdit.hbs';
 
-registerPartials();
+export class ProfilePageEdit extends Component {
+	constructor() {
+		super({});
+	}
 
-document.addEventListener('DOMContentLoaded', () => {
-	const root = document.getElementById('profileEdit') as HTMLElement;
-	root.innerHTML = profileEdit();
-});
+	protected render(): DocumentFragment {
+		return this.compile(template, this.props);
+	}
+}

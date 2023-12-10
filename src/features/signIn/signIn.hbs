@@ -1,16 +1,32 @@
-{{#> layout }}
-  <section class="auth">
-    <div class="auth__wrap">
-      {{#> form title="Вход"}}
-          <div class="auth__group">
-            {{> input placeholder="Логин" name="login"}}
-            {{> input type="password" placeholder="Пароль" name="password"}}
-          </div>
+<section class='auth'>
+	<div class='auth__wrap'>
+		<form class='form' onsubmit={{submit}}>
+			<h2 class='form__title'>Вход</h2>
+			<div class='auth__group'>
+				{{{Input placeholder='Логин' name='login' validate=validate.login}}}
+				<p class='auth__error' id='login'></p>
+				{{{Input
+					type='password'
+					placeholder='Пароль'
+					name='password'
+					validate=validate.password
+				}}}
+				<p class='auth__error' id='password'></p>
+			</div>
 
-          {{> button type="submit" label="Авторизоваться" class="auth__btn"}}
-          {{> link to="/src/pages/signUp/signUp.html" label="Нет аккаунта?" class="auth__link"}}
-          {{> link to="/src/pages/chat/chat.html" label="Перейти в Чат" class="auth__link"}}
-      {{/form}}
-    </div>
-  </section>
-{{/layout}}
+			{{{Button type='submit' label='Авторизоваться' class='auth__btn'}}}
+			{{{Button
+				label='Нет аккаунта?'
+				class='login__link button_st'
+				type='button'
+				onClick=onClick
+			}}}
+			{{{Button
+				label='Чат'
+				class='login__link button_st'
+				type='button'
+				onClick=onClickChat
+			}}}
+		</form>
+	</div>
+</section>

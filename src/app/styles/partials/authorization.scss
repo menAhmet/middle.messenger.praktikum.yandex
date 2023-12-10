@@ -18,4 +18,13 @@
     color: $primary-brown;
     margin-top: 1.2rem;
   }
+  &__error {
+    display: none;
+    color: $primary-red;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    &.error {
+      display: block;
+    }
+  }
 }

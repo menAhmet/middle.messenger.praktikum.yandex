@@ -1,10 +1,12 @@
-import '@/app/styles/style.scss';
-import profilePasswordEdit from './profilePasswordEdit.hbs';
-import { registerPartials } from '@/app/providers';
+import Component from '@/shared/utils/Component';
+import template from './profilePasswordEdit.hbs';
 
-registerPartials();
+export class ProfilePagePassword extends Component {
+	constructor() {
+		super({});
+	}
 
-document.addEventListener('DOMContentLoaded', () => {
-	const root = document.getElementById('profilePasswordEdit') as HTMLElement;
-	root.innerHTML = profilePasswordEdit();
-});
+	protected render(): DocumentFragment {
+		return this.compile(template, this.props);
+	}
+}
