@@ -24,7 +24,7 @@ function queryStringify(data: Options['data']): string {
 }
 
 class HTTPTransport {
-	get: HTTPMethod = (url: string, options: Options = {}) => {
+	get: HTTPMethod = (url, options = {}) => {
 		return this.request(
 			url,
 			{ ...options, method: METHODS.GET },
