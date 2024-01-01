@@ -1,26 +1,75 @@
 <ul class='profile-list'>
 	<li class='profile-item profile-list__item'>
 		<span>Почта</span>
-		<span class='profile-name'>{{> input placeholder="pochta@yandex.ru" name="email" class="profile__input"}}</span>
-	</li>
+        <div>
+		<span class='profile-name'>{{{Input
+				placeholder='pochta@yandex.ru'
+				name='email'
+				class='profile__input'
+                validate=validate.email
+			}}}</span>
+        <p class='auth__error' id='email'></p>
+	    </div>
+    </li>
 	<li class='profile-item profile-list__item'>
 		<span>Логин</span>
-		<span class='profile-name'>{{> input placeholder="ivanivanov" name="login" class="profile__input"}}</span>
-	</li>
+        <div>
+		<span class='profile-name'>{{{Input
+				placeholder='ivanivanov'
+				name='login'
+				class='profile__input'
+                validate=validate.login
+			}}}</span>
+        <p class='auth__error' id='login'></p>
+	    </div>
+    </li>
 	<li class='profile-item profile-list__item'>
 		<span>Имя</span>
-		<span class='profile-name'>{{> input placeholder="Иван" name="first_name" class="profile__input"}}</span>
-	</li>
+        <div>
+		<span class='profile-name'>{{{Input
+				placeholder='Иван'
+				name='first_name'
+				class='profile__input'
+                validate=validate.first_name
+			}}}</span>
+        <p class='auth__error' id='first_name'></p>
+	    </div>
+    </li>
 	<li class='profile-item profile-list__item'>
 		<span>Фамилия</span>
-		<span class='profile-name'>{{> input placeholder="Иванов" name="second_name" class="profile__input"}}</span>
-	</li>
+        <div>
+		<span class='profile-name'>{{{Input
+				placeholder='Иванов'
+				name='second_name'
+				class='profile__input'
+                validate=validate.second_name
+			}}}</span>
+        <p class='auth__error' id='second_name'></p>
+	    </div>
+    </li>
 	<li class='profile-item profile-list__item'>
 		<span>Имя в чате</span>
-		<span class='profile-name'>{{> input placeholder="Иван" name="display_name" class="profile__input"}}</span>
+		<div>
+            <span class='profile-name'>{{{Input
+                    placeholder='Иван'
+                    name='display_name'
+                    class='profile__input'
+                    validate=validate.display_name
+            }}}</span>
+            <p class='auth__error' id='display_name'></p>
+        </div>
 	</li>
 	<li class='profile-item profile-list__item'>
 		<span>Телефон</span>
-		<span class='profile-name'>{{> input placeholder="+7 (909) 967 30 30" name="phone" type="tel" class="profile__input"}}</span>
+        <div>
+		<span class='profile-name'>{{{Input
+				placeholder='+7 (909) 967 30 30'
+				name='phone'
+				type='tel'
+				class='profile__input'
+                validate=validate.phone
+			}}}</span>
+            <p class='auth__error' id='phone'></p>
+        </div>
 	</li>
 </ul>

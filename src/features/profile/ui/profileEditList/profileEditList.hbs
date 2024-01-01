@@ -1,5 +1,17 @@
 <ul class='profile-edit'>
-	<li class="profile-item">{{> link class="profile-edit__link profile-edit__change" label="Изменить данные" to="/src/pages/profile/profileEdit.html"}}</li>
-	<li class="profile-item">{{> link class="profile-edit__link profile-edit__change" label="Изменить пароль" to="/src/pages/profile/profilePasswordEdit.html"}}</li>
-	<li class="profile-item">{{> link class="profile-edit__link profile-edit__exit" label="Выйти" to="/src/pages/signIn/signIn.html"}}</li>
+	<li class='profile-item'>{{{Button
+			class='profile-edit__link profile-edit__change'
+			label='Изменить данные'
+			onClick=onClickProfileEdit
+		}}}</li>
+	<li class='profile-item'>{{{Button
+			class='profile-edit__link profile-edit__change'
+			label='Изменить пароль'
+			onClick=onClickPasswordEdit
+		}}}</li>
+	<li class='profile-item'>{{{Button
+			class='profile-edit__link profile-edit__exit'
+			label='Выйти'
+			onClick=onClickSignIn
+		}}}</li>
 </ul>

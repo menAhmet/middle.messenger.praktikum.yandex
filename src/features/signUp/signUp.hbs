@@ -1,20 +1,55 @@
-{{#> layout }}
-  <section class="auth">
-    <div class="auth__wrap">
-      {{#> form title="Регистрация"}}
-          <div class="auth__group">
-            {{> input placeholder="Почта" type="email" name="email"}}
-            {{> input placeholder="Логин" name="login"}}
-            {{> input placeholder="Имя" name="first_name"}}
-            {{> input placeholder="Фамилия" name="second_name"}}
-            {{> input placeholder="Телефон" type="tel" name="phone"}}
-            {{> input type="password" placeholder="Пароль" name="password"}}
-            {{> input type="password" placeholder="Пароль (ещё раз)" name="password"}}
-          </div>
+<section class='auth'>
+	<div class='auth__wrap'>
+		<form class='form'>
+			<h2 class='form__title'>Регистрация</h2>
+			<div class='auth__group'>
+				{{{Input
+					placeholder='Почта'
+					type='email'
+					name='email'
+					validate=validate.email
+				}}}
+				<p class='auth__error' id='email'></p>
+				{{{Input placeholder='Логин' name='login' validate=validate.login}}}
+				<p class='auth__error' id='login'></p>
+				{{{Input placeholder='Имя' name='first_name' validate=validate.name}}}
+				<p class='auth__error' id='first_name'></p>
+				{{{Input
+					placeholder='Фамилия'
+					name='second_name'
+					validate=validate.surname
+				}}}
+				<p class='auth__error' id='second_name'></p>
+				{{{Input
+					placeholder='Телефон'
+					type='tel'
+					name='phone'
+					validate=validate.phone
+				}}}
+				<p class='auth__error' id='phone'></p>
+				{{{Input
+					type='password'
+					placeholder='Пароль'
+					name='password'
+					validate=validate.password
+				}}}
+				<p class='auth__error' id='password'></p>
+				{{{Input
+					type='password'
+					placeholder='Пароль (ещё раз)'
+					name='password'
+					validate=validate.confirmPassword
+				}}}
+				<p class='auth__error' id='confirmPassword'></p>
+			</div>
 
-          {{> button type="submit" label="Зарегистрироваться" class="auth__btn"}}
-          {{> link to="/src/pages/signIn/signIn.html" label="Войти" class="auth__link"}}
-      {{/form}}
-    </div>
-  </section>
-{{/layout}}
+			{{{Button type='submit' label='Зарегистрироваться' class='auth__btn'}}}
+			{{{Button
+				label='Войти'
+				class='auth__link'
+				type='button'
+				onClick=this.onClick
+			}}}
+		</form>
+	</div>
+</section>

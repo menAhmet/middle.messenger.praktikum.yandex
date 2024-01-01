@@ -1,13 +1,11 @@
 {{#> layout }}
 <section class='profile'>
 	<div class='profile__wrap'>
-		<a href='/src/pages/chat/chat.html' class='profile__back'>
-			<img src='/arrow.svg' alt='' />
-		</a>
+    {{{Button label='Назад' class='profile__back' onClick=onClick}}}
 		<div class='profile__body'>
-      {{> avatar src="/avatar.svg" class="profile__avatar" }}
-      {{> profileList}}
-      {{> profileEditList}}
+      {{{Avatar src="/avatar.svg" class="profile__avatar" }}}
+      {{{ ProfileList}}}
+      {{{ ProfileEditList}}}
 		</div>
 	</div>
 </section>

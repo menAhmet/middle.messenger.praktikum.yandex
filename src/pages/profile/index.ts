@@ -1,10 +1,12 @@
-import '@/app/styles/style.scss';
-import profile from './profile.hbs';
-import { registerPartials } from '@/app/providers';
+import Component from '@/shared/utils/Component';
+import template from './profile.hbs';
 
-registerPartials();
+export class ProfilePage extends Component {
+	constructor() {
+		super({});
+	}
 
-document.addEventListener('DOMContentLoaded', () => {
-	const root = document.getElementById('profile') as HTMLElement;
-	root.innerHTML = profile();
-});
+	protected render(): DocumentFragment {
+		return this.compile(template, this.props);
+	}
+}
