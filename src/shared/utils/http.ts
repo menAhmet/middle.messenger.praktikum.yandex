@@ -111,7 +111,6 @@ class HTTPTransport {
 			} else if (data instanceof FormData) {
 				xhr.send(data);
 			} else {
-				console.log(data);
 				xhr.send(JSON.stringify(data));
 			}
 		});
