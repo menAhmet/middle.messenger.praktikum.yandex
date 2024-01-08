@@ -35,7 +35,8 @@ export class Input extends Component {
 			`#${this.props.name}`
 		) as HTMLParagraphElement;
 
-		const validate = (this.props as IInput).validate!(value);
+		const validate =
+			this.props.validate && (this.props as IInput).validate!(value);
 
 		if (validate) {
 			error.textContent = validate;

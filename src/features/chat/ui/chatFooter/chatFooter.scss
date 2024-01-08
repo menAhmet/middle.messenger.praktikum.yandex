@@ -2,4 +2,8 @@
   @include chatHeaderAndFooterFlex;
 
   border-top: 1px solid $primary-color;
+  &__btn {
+    width: 100px;
+    background-color: $primary-brown;
+  }
 }
