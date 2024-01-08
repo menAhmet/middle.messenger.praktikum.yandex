@@ -48,11 +48,11 @@ registerComponent('ProfilePasswordEdit', ProfilePasswordEdit);
 enum Routes {
 	Index = '/',
 	SignIn = '/signin',
-	Register = '/signup',
+	Register = '/sign-up',
 	Profile = '/profile',
 	ProfileEdit = '/profileedit',
 	ProfilePassword = '/profilepassword',
-	Chat = '/chat',
+	Chat = '/messenger',
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
