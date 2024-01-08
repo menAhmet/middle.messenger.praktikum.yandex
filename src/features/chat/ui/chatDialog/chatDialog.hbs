@@ -1,0 +1,15 @@
+<div>
+	{{{Button type='button' onClick=onClick label='Добавить новый чат'}}}
+	{{#Dialog}}
+		<form>
+			{{{Input
+				placeholder='Новый пользователь'
+				name='title'
+				validate=validate.title
+			}}}
+			<p class='auth__error' id='title'></p>
+			{{{Button label='Добавить пользователя' type='submit' onClick=onAddUser}}}
+			{{{Button label='Закрыть' type='button' onClick=onClose}}}
+		</form>
+	{{/Dialog}}
+</div>

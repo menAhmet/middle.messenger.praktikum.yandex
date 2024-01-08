@@ -1,11 +1,11 @@
 {{#> layout }}
 <section class='profile'>
 	<div class='profile__wrap'>
-    {{{Button label='Назад' class='profile__back' onClick=onClick}}}
+    {{{Link label='Назад' class='profile__back' to='/chat'}}}
 		<div class='profile__body'>
-      {{{Avatar src="/avatar.svg" class="profile__avatar" }}}
-      {{{ ProfileList}}}
-      {{{ ProfileEditList}}}
+      {{{AvatarProfile}}}
+      {{{ProfileList}}}
+      {{{ProfileEditList}}}
 		</div>
 	</div>
 </section>
