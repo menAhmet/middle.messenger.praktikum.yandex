@@ -2,7 +2,7 @@ import Component from '@/shared/utils/Component';
 import template from './chatHeader.hbs';
 
 interface IChatHeader {
-	name?: string;
+	title?: string;
 }
 
 export class ChatHeader extends Component {

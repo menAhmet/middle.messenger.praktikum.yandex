@@ -1,6 +1,6 @@
 <section class='auth'>
 	<div class='auth__wrap'>
-		<form class='form'>
+		<form class='form' onsubmit={{submit}}>
 			<h2 class='form__title'>Регистрация</h2>
 			<div class='auth__group'>
 				{{{Input
@@ -37,19 +37,14 @@
 				{{{Input
 					type='password'
 					placeholder='Пароль (ещё раз)'
-					name='password'
+					name='confirmPassword'
 					validate=validate.confirmPassword
 				}}}
 				<p class='auth__error' id='confirmPassword'></p>
 			</div>
 
 			{{{Button type='submit' label='Зарегистрироваться' class='auth__btn'}}}
-			{{{Button
-				label='Войти'
-				class='auth__link'
-				type='button'
-				onClick=this.onClick
-			}}}
+			{{{Link label='Войти' class='auth__link' to='/'}}}
 		</form>
 	</div>
 </section>

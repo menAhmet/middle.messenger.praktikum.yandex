@@ -1,18 +1,14 @@
 import Component from '@/shared/utils/Component';
-import { render } from '@/shared/utils';
 import template from './profileEditList.hbs';
+import AuthController from '@/app/controllers/AuthController';
 
 export class ProfileEditList extends Component {
 	constructor() {
 		super({
-			onClickProfileEdit: () => {
-				render('profileedit');
-			},
-			onClickPasswordEdit: () => {
-				render('profilepasswordedit');
-			},
+			onClickProfileEdit: () => {},
+			onClickPasswordEdit: () => {},
 			onClickSignIn: () => {
-				render('signin');
+				AuthController.logout();
 			},
 		});
 	}

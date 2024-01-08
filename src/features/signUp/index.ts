@@ -1,6 +1,5 @@
 import Component from '@/shared/utils/Component';
 import template from './signUp.hbs';
-import { render } from '@/shared/utils';
 import {
 	validateEmailWithRegx,
 	validateLoginWithRegx,
@@ -8,6 +7,8 @@ import {
 	validatePasswordWithRegx,
 	validatePhoneWithRegx,
 } from '@/shared/libs';
+import AuthController from '@/app/controllers/AuthController';
+import { serializerFormData } from '@/shared/utils';
 
 export class SignUp extends Component {
 	constructor() {
@@ -21,9 +22,6 @@ export class SignUp extends Component {
 				password: validatePasswordWithRegx,
 				confirmPassword: validatePasswordWithRegx,
 			},
-			onClick: () => {
-				render('signin');
-			},
 			events: {
 				submit: (event: Event) => {
 					this._onSubmit(event);
@@ -32,10 +30,12 @@ export class SignUp extends Component {
 		});
 	}
 
-	private _onSubmit(event: Event): void {
+	_onSubmit(event: Event): void {
 		event.preventDefault();
 		const target = event.target as HTMLFormElement;
-		new FormData(target);
+
+		const formData = serializerFormData(target);
+		AuthController.signup(formData);
 	}
 
 	protected render(): DocumentFragment {

@@ -1,9 +1,23 @@
 import Component from '@/shared/utils/Component';
 import template from './chatFooter.hbs';
+import MessageController from '@/app/controllers/MessageController';
+
+interface IChatFooter {
+	selectedRoom?: number | undefined;
+}
 
 export class ChatFooter extends Component {
-	constructor() {
-		super({});
+	constructor(props: IChatFooter) {
+		super({
+			...props,
+			click: () => {
+				const message = document.getElementById(
+					'message'
+				) as HTMLTextAreaElement;
+				MessageController.sendMessage(props.selectedRoom!, message.value);
+				message.value = '';
+			},
+		});
 	}
 
 	protected render(): DocumentFragment {

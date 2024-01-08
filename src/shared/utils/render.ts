@@ -1,27 +1,15 @@
-import { ChatPage } from '@/pages/chat';
-import { ProfilePage } from '@/pages/profile';
-import { ProfilePageEdit } from '@/pages/profile/indexEdit';
-import { ProfilePagePassword } from '@/pages/profile/indexPasswordEdit';
-import { SignInPage } from '@/pages/signIn';
-import { SignUpPage } from '@/pages/signUp';
+import Component from './Component';
 
-const ROUTES = {
-	signin: SignInPage,
-	signup: SignUpPage,
-	chat: ChatPage,
-	profile: ProfilePage,
-	profileedit: ProfilePageEdit,
-	profilepasswordedit: ProfilePagePassword,
-};
+export const render = (query: string, block: Component) => {
+	const root = document.querySelector(query);
 
-export const render = (name: keyof typeof ROUTES) => {
-	const root = document.querySelector('#root')!;
+	if (root === null) {
+		throw new Error(`root not found by selector "${query}"`);
+	}
+
 	root.innerHTML = '';
 
-	const Page = ROUTES[name];
-	const page = new Page();
+	root.append(block.getContent()!);
 
-	root.append(page.getContent()!);
-
-	page.dispatchComponentDidMount();
+	return root;
 };

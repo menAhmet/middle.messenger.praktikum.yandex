@@ -2,7 +2,8 @@
 	<div class='chat__wrap'>
 		<div class='chat__sidebar'>
 			<div class='chat__topbar'>
-				{{{Button label='Профиль >' class='chat__profile' onClick=onClick}}}
+				{{{ChatDialog}}}
+				{{{Link label='Профиль >' class='chat__profile' to='/profile'}}}
 				{{{Input
 					class='chat__search'
 					name='search'
@@ -12,17 +13,21 @@
 				<p class='auth__error' id='search'></p>
 			</div>
 			<ul class='chat__list'>
-				<li>{{{ChatItem
-						name='Rick Sanchez'
-						message='wassup'
-						date='12:00'
-					}}}</li>
+				{{#each chats}}
+					<li>
+						{{{ChatItem title=title message=last_message.content onClick=../onClick user=this}}}
+					</li>
+				{{/each}}
 			</ul>
 		</div>
 		<div class='chat__body'>
-			{{{ChatHeader name='Rick Sanchez'}}}
-			{{{ChatBody}}}
-			{{{ChatFooter}}}
+    {{#if selectedRoom }}
+			{{{ChatHeader title=selectedRoom.title}}}
+			{{{ChatBody messages=messages}}}
+			{{{ChatFooter selectedRoom=selectedRoom.id}}}
+    {{else}}
+      Выбрать чат
+    {{/if}}
 		</div>
 	</div>
 </section>
