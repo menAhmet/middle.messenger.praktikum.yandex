@@ -47,7 +47,6 @@ registerComponent('ProfilePasswordEdit', ProfilePasswordEdit);
 
 enum Routes {
 	Index = '/',
-	SignIn = '/signin',
 	Register = '/sign-up',
 	Profile = '/profile',
 	ProfileEdit = '/profileedit',
@@ -57,7 +56,6 @@ enum Routes {
 
 document.addEventListener('DOMContentLoaded', async () => {
 	Router.use(Routes.Index, SignInPage)
-		.use(Routes.SignIn, SignInPage)
 		.use(Routes.Register, SignUpPage)
 		.use(Routes.Chat, ChatPage)
 		.use(Routes.Profile, ProfilePage)
