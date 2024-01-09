@@ -22,7 +22,7 @@
 		</div>
 		<div class='chat__body'>
     {{#if selectedRoom }}
-			{{{ChatHeader title=selectedRoom.title}}}
+			{{{ChatHeader selectedRoom=selectedRoom onRemoveRoomById=onRemoveRoomById}}}
 			{{{ChatBody messages=messages}}}
 			{{{ChatFooter selectedRoom=selectedRoom.id}}}
     {{else}}

@@ -14,6 +14,10 @@ export class ChatLayoutBase extends Component {
 			onClick: (user: IUser) => {
 				ChatController.selectRoom(user.id);
 			},
+			onRemoveRoomById: (roomId: number) => {
+				console.log(roomId);
+				ChatController.deleteChatRoom(roomId);
+			},
 		});
 		ChatController.fetchChats();
 	}

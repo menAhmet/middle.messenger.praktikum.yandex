@@ -2,10 +2,22 @@
   @include chatHeaderAndFooterFlex;
 
   border-bottom: 1px solid $primary-color;
+  justify-content: space-between;
 
   &__name {
     font-size: 1.4rem;
     font-weight: 600;
     text-transform: capitalize;
+  }
+
+  &__left {
+    @include chatHeaderAndFooterFlex;
+  }
+
+  &__remove {
+    padding: 0;
+    width: auto;
+    font-size: 1rem;
+    color: $primary-red;
   }
 }

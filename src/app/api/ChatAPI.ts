@@ -19,7 +19,12 @@ export class ChatAPI extends BaseAPI {
 	}
 
 	delete(id: number): Promise<unknown> {
-		return this.http.delete('', { chatId: id } as never);
+		const data = { chatId: id };
+
+		return this.http.delete('', {
+			data,
+			headers: { 'Content-Type': 'application/json' },
+		});
 	}
 
 	read(): Promise<IChat[]> {
