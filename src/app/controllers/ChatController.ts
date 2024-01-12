@@ -20,6 +20,24 @@ class ChatController {
 		}
 	}
 
+	async addUserToChat(userId: number, chatId: number) {
+		try {
+			await this.api.addUserToChat([userId], chatId);
+			await this.fetchChatsUsers(chatId);
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	async deleteUserToChat(userId: number, chatId: number) {
+		try {
+			await this.api.deleteUserToChat([userId], chatId);
+			await this.fetchChatsUsers(chatId);
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
 	async fetchChats() {
 		try {
 			const chats = await this.api.read();
@@ -30,6 +48,15 @@ class ChatController {
 			});
 
 			store.set('chats', chats);
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	async fetchChatsUsers(id: number) {
+		try {
+			const users = await this.api.readChatUsers(id);
+			store.set('chatUsers', users);
 		} catch (error) {
 			console.error(error);
 		}
@@ -50,6 +77,7 @@ class ChatController {
 	}
 
 	selectRoom(id: number) {
+		this.fetchChatsUsers(id);
 		store.set('selectedRoom', id);
 	}
 }

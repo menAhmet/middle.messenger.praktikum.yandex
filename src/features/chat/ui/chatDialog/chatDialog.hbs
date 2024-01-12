@@ -1,6 +1,6 @@
 <div>
-	{{{Button type='button' onClick=onClick label='Добавить новый чат'}}}
-	{{#Dialog}}
+	{{{Button type='button' onClick=onOpen label='Добавить новый чат'}}}
+	{{#Dialog id='dialog' open=isOpen}}
 		<form>
 			{{{Input
 				placeholder='Новый пользователь'

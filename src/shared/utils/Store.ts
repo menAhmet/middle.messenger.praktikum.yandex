@@ -11,9 +11,13 @@ export enum StoreEvents {
 
 interface State {
 	user: IUser;
+	chatUsers: IChat[];
+	searchUsers: IUser[];
 	chats: IChat[];
 	messages: Record<number, IMessage[]>;
 	selectedRoom?: number;
+	isChatInnerDialog: boolean;
+	isChatDialog: boolean;
 }
 
 export class Store extends EventBus {

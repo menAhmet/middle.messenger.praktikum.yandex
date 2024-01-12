@@ -1,0 +1,25 @@
+<div class='chat-inner-dialog'>
+	{{{Button
+		type='button'
+		onClick=onOpenDialog
+		label='Добавить пользователя в чат'
+	}}}
+	{{#Dialog id='innerDialog' open=isOpen}}
+		{{{Input
+			placeholder='Имя'
+			name='title'
+			validate=validate.title
+			id='addUser'
+		}}}
+		<p class='auth__error' id='title'></p>
+		{{{Button label='Поиск' onClick=onSearchUsers}}}
+		{{#each searchUsers}}
+      {{{ListSearchUser onSelectRoom=../onAddUserToChat name=first_name userId=id label='+'}}}
+		{{/each}}
+    <p class="chat-inner-dialog__remove-user">Удалить пользователя</pс>
+    {{#each chatUsers}}
+      {{{ListSearchUser onSelectRoom=../onRemoveUserToChat name=first_name userId=id label="-"}}}
+		{{/each}}
+		{{{Button label='Закрыть' type='button' onClick=onCloseDialog}}}
+	{{/Dialog}}
+</div>

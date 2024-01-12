@@ -22,7 +22,7 @@ class UserController {
 		try {
 			await this.api.updatePassword(data);
 		} catch (error) {
-			//console.error(error);
+			console.error(error);
 		}
 	}
 
@@ -30,6 +30,15 @@ class UserController {
 		try {
 			const user = await this.api.updateAavatar(data);
 			store.set('user', user);
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
+	async searchUsers(data: DataType) {
+		try {
+			const users = await this.api.search(data);
+			store.set('searchUsers', users);
 		} catch (error) {
 			console.error(error);
 		}

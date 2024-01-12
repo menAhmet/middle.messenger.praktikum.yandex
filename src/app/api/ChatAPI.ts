@@ -18,8 +18,24 @@ export class ChatAPI extends BaseAPI {
 		});
 	}
 
-	delete(id: number): Promise<unknown> {
-		const data = { chatId: id };
+	addUserToChat(users: number[], chatId: number): Promise<unknown> {
+		const data = { users, chatId };
+		return this.http.put('/users', {
+			data,
+			headers: { 'Content-Type': 'application/json' },
+		});
+	}
+
+	deleteUserToChat(users: number[], chatId: number): Promise<unknown> {
+		const data = { users, chatId };
+		return this.http.delete('/users', {
+			data,
+			headers: { 'Content-Type': 'application/json' },
+		});
+	}
+
+	delete(chatId: number): Promise<unknown> {
+		const data = { chatId };
 
 		return this.http.delete('', {
 			data,
@@ -29,6 +45,10 @@ export class ChatAPI extends BaseAPI {
 
 	read(): Promise<IChat[]> {
 		return this.http.get('') as Promise<IChat[]>;
+	}
+
+	readChatUsers(id: number): Promise<unknown> {
+		return this.http.get(`/${id}/users`);
 	}
 
 	async getToken(id: number): Promise<string> {

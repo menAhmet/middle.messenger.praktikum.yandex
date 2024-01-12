@@ -2,6 +2,8 @@
 	<div class='chat-header__left'>
 		{{{Avatar src='/avatar.svg'}}}
 		<h4 class='chat-header__name'>{{selectedRoom.title}}</h4>
+		<h4 class='chat-header__name'>{{users.length}} П</h4>
 	</div>
-	{{{Button onClick=click label='Удалить чат' class='chat-header__remove'}}}
+	{{{ChatInnerDialog}}}
+	{{{Button onClick=onRemove label='Удалить чат' class='chat-header__remove'}}}
 </div>

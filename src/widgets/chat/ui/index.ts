@@ -15,7 +15,6 @@ export class ChatLayoutBase extends Component {
 				ChatController.selectRoom(user.id);
 			},
 			onRemoveRoomById: (roomId: number) => {
-				console.log(roomId);
 				ChatController.deleteChatRoom(roomId);
 			},
 		});
@@ -29,6 +28,7 @@ export class ChatLayoutBase extends Component {
 
 const withChats = withStore((state) => ({
 	chats: [...(state.chats || [])],
+	chatUsers: [...(state.chatUsers || [])],
 	selectedRoom: (state.chats || []).find(({ id }) => id === state.selectedRoom),
 	messages: (state.messages || {})[state.selectedRoom as number] || [],
 }));

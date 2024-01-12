@@ -3,6 +3,7 @@ import template from './chatDialog.hbs';
 import { validateNameWithRegx } from '@/shared/libs';
 import { serializerFormData } from '@/shared/utils';
 import ChatController from '@/app/controllers/ChatController';
+import store from '@/shared/utils/Store';
 
 export class ChatDialog extends Component {
 	constructor() {
@@ -15,23 +16,22 @@ export class ChatDialog extends Component {
 					this._onSubmit(event);
 				},
 			},
-			onClick: () => {
-				this._dialogOpen();
+			isOpen: store.getState().isChatDialog,
+			onOpen: () => {
+				this._onOpenDialog();
 			},
 			onClose: () => {
-				this._dialogClose();
+				this._onCloseDialog();
 			},
 		});
 	}
 
-	private _dialogOpen(): void {
-		const dialog = document.getElementById('dialog');
-		(dialog as HTMLDialogElement).show();
+	private _onOpenDialog() {
+		store.set('isChatDialog', true);
 	}
 
-	private _dialogClose(): void {
-		const dialog = document.getElementById('dialog');
-		(dialog as HTMLDialogElement).close();
+	private _onCloseDialog() {
+		store.set('isChatDialog', false);
 	}
 
 	private _onSubmit(event: Event): void {
@@ -40,7 +40,9 @@ export class ChatDialog extends Component {
 
 		const formData = serializerFormData(target);
 
-		ChatController.createChatRoom(formData);
+		ChatController.createChatRoom(formData).finally(() =>
+			this._onCloseDialog()
+		);
 	}
 
 	render() {

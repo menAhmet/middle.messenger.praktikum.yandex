@@ -4,6 +4,7 @@ import template from './input.hbs';
 type InputType = 'email' | 'text' | 'phone' | 'tel';
 
 interface IInput {
+	id?: string;
 	value?: string;
 	class?: string;
 	placeholder?: string;

@@ -5,6 +5,7 @@ import {
 	ChatDialog,
 	ChatFooter,
 	ChatHeader,
+	ChatInnerDialog,
 	ChatItem,
 	ProfileEditList,
 	ProfileList,
@@ -18,7 +19,14 @@ import { ProfilePageEdit } from './pages/profile/indexEdit';
 import { ProfilePagePassword } from './pages/profile/indexPasswordEdit';
 import { SignInPage } from './pages/signIn';
 import { SignUpPage } from './pages/signUp';
-import { Avatar, Button, Dialog, Input, Textarea } from './shared/ui';
+import {
+	Avatar,
+	Button,
+	Dialog,
+	Input,
+	ListSearchUser,
+	Textarea,
+} from './shared/ui';
 import { Link } from './shared/ui/link';
 import { registerComponent } from './shared/utils';
 import Router from './shared/utils/Router';
@@ -30,7 +38,9 @@ registerComponent('Input', Input);
 registerComponent('Avatar', Avatar);
 registerComponent('Textarea', Textarea);
 registerComponent('Dialog', Dialog);
+registerComponent('ListSearchUser', ListSearchUser);
 registerComponent('ChatDialog', ChatDialog);
+registerComponent('ChatInnerDialog', ChatInnerDialog);
 registerComponent('SignIn', SignIn);
 registerComponent('SignUp', SignUp);
 registerComponent('ChatBody', ChatBody);

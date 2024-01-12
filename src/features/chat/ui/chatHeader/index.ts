@@ -4,6 +4,7 @@ import { IChat } from '@/shared/types';
 
 interface IChatHeader {
 	selectedRoom?: IChat;
+	users?: IChat[];
 	onRemoveRoomById?: (roomId: string) => void;
 }
 
@@ -11,10 +12,8 @@ export class ChatHeader extends Component {
 	constructor(props: IChatHeader) {
 		super({
 			...props,
-			events: {
-				click: () => {
-					this._onRemoveRoom(props.selectedRoom!);
-				},
+			onRemove: () => {
+				this._onRemoveRoom(props.selectedRoom!);
 			},
 		});
 	}
@@ -24,6 +23,6 @@ export class ChatHeader extends Component {
 	}
 
 	protected render(): DocumentFragment {
-		return this.compile(template, this.props);
+		return this.compile(template, { ...this.props });
 	}
 }

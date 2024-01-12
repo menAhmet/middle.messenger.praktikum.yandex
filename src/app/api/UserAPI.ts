@@ -24,6 +24,13 @@ export class UserAPI extends BaseAPI {
 		return this.http.put('/profile/avatar', { data });
 	}
 
+	search(data: DataType): Promise<unknown> {
+		return this.http.post('/search', {
+			data,
+			headers: { 'Content-Type': 'application/json' },
+		});
+	}
+
 	read = undefined;
 	create = undefined;
 	delete = undefined;

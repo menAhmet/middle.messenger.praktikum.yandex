@@ -37,5 +37,7 @@ export class AvatarBase extends Component {
 	}
 }
 
-const withUser = withStore((state) => ({ ...state }));
+const withUser = withStore((state) => ({
+	avatar: HTTPTransport.API_URL + '/resources' + state.user.avatar,
+}));
 export const AvatarProfile = withUser(AvatarBase);
