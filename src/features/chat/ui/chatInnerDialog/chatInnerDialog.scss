@@ -1,0 +1,27 @@
+.chat-inner-dialog {
+  position: relative;
+
+  &__search-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__search-add {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $primary-color;
+    padding: 0.2rem;
+  }
+
+  &__search-btn {
+    width: 50px;
+  }
+
+  &__remove-user {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}

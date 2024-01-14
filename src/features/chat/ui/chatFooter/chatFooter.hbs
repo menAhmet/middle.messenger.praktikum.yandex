@@ -1,4 +1,10 @@
 <div class='chat-footer'>
-	{{{Textarea}}}
-	{{!--{{#> iconButton }} <img src="/arrow.svg" alt=""> {{/iconButton}}--}}
+	{{!--{{{Input name='message' placeholder='Сообщение' class='textarea'}}}--}}
+	{{{Textarea id='message'}}}
+	{{{Button
+		label='отправить'
+		type='submit'
+		class='chat-footer__btn'
+		onClick=click
+	}}}
 </div>

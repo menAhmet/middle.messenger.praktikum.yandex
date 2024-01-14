@@ -1,14 +1,14 @@
 import Component from '@/shared/utils/Component';
 import template from './profile.hbs';
-import { render } from '@/shared/utils';
+import AuthController from '@/app/controllers/AuthController';
 
 export class Profile extends Component {
 	constructor() {
 		super({
-			onClick: () => {
-				render('chat');
-			},
+			onClick: () => {},
 		});
+
+		AuthController.fetchUser();
 	}
 
 	protected render(): DocumentFragment {

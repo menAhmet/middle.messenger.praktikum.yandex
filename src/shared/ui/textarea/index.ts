@@ -3,6 +3,7 @@ import template from './textarea.hbs';
 
 interface ITextarea {
 	class?: string;
+	id?: string;
 }
 
 export class Textarea extends Component {
