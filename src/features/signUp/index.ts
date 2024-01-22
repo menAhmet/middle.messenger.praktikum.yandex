@@ -1,4 +1,4 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './signUp.hbs';
 import {
 	validateEmailWithRegx,
@@ -6,9 +6,9 @@ import {
 	validateNameWithRegx,
 	validatePasswordWithRegx,
 	validatePhoneWithRegx,
-} from '@/shared/libs';
-import AuthController from '@/app/controllers/AuthController';
-import { serializerFormData } from '@/shared/utils';
+} from '@/shared/libs/index.ts';
+import AuthController from '@/app/controllers/AuthController.ts';
+import { serializerFormData } from '@/shared/utils/index.ts';
 
 export class SignUp extends Component {
 	constructor() {

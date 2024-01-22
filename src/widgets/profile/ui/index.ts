@@ -1,2 +1,2 @@
-export * from './profile/index';
-export * from './profilePasswordEdit/index';
+export * from './profile/index.ts';
+export * from './profilePasswordEdit/index.ts';

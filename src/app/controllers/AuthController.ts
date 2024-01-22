@@ -1,7 +1,7 @@
 import Router from '@/shared/utils/Router';
 import API, { AuthAPI } from '../api/AuthAPI';
 import { DataType } from '@/shared/utils/http';
-import store from '@/shared/utils/Store';
+import store from '@/shared/utils/Store.ts';
 
 class AuthController {
 	private readonly api: AuthAPI;

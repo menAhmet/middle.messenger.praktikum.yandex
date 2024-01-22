@@ -1,6 +1,6 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './profile.hbs';
-import AuthController from '@/app/controllers/AuthController';
+import AuthController from '@/app/controllers/AuthController.ts';
 
 export class Profile extends Component {
 	constructor() {

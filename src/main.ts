@@ -1,4 +1,4 @@
-import AuthController from './app/controllers/AuthController';
+import AuthController from './app/controllers/AuthController.ts';
 import {
 	AvatarProfile,
 	ChatBody,
@@ -12,13 +12,13 @@ import {
 	ProfilePasswordList,
 	SignIn,
 	SignUp,
-} from './features';
-import { ChatPage } from './pages/chat';
-import { ProfilePage } from './pages/profile';
-import { ProfilePageEdit } from './pages/profile/indexEdit';
-import { ProfilePagePassword } from './pages/profile/indexPasswordEdit';
-import { SignInPage } from './pages/signIn';
-import { SignUpPage } from './pages/signUp';
+} from './features/index.ts';
+import { ChatPage } from './pages/chat/index.ts';
+import { ProfilePage } from './pages/profile/index.ts';
+import { ProfilePageEdit } from './pages/profile/indexEdit.ts';
+import { ProfilePagePassword } from './pages/profile/indexPasswordEdit.ts';
+import { SignInPage } from './pages/signIn/index.ts';
+import { SignUpPage } from './pages/signUp/index.ts';
 import {
 	Avatar,
 	Button,
@@ -26,11 +26,11 @@ import {
 	Input,
 	ListSearchUser,
 	Textarea,
-} from './shared/ui';
-import { Link } from './shared/ui/link';
-import { registerComponent } from './shared/utils';
+	Link,
+} from './shared/ui/index.ts';
+import { registerComponent } from './shared/utils/index.ts';
 import Router from './shared/utils/Router';
-import { ChatLayout, Profile, ProfilePasswordEdit } from './widgets';
+import { ChatLayout, Profile, ProfilePasswordEdit } from './widgets/index.ts';
 
 registerComponent('Link', Link);
 registerComponent('Button', Button);

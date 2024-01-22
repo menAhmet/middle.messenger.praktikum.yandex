@@ -1,9 +1,9 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './chatInnerDialog.hbs';
-import { validateNameWithRegx } from '@/shared/libs';
-import UserController from '@/app/controllers/UserController';
-import store from '@/shared/utils/Store';
-import ChatController from '@/app/controllers/ChatController';
+import { validateNameWithRegx } from '@/shared/libs/index.ts';
+import UserController from '@/app/controllers/UserController.ts';
+import store from '@/shared/utils/Store.ts';
+import ChatController from '@/app/controllers/ChatController.ts';
 
 export class ChatInnerDialog extends Component {
 	constructor() {

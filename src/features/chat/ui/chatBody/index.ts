@@ -1,6 +1,6 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './chatBody.hbs';
-import { IMessage } from '@/shared/types';
+import { IMessage } from '@/shared/types/index.ts';
 
 interface IChatBody {
 	messages?: IMessage[];

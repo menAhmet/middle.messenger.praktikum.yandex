@@ -1,6 +1,6 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './chatHeader.hbs';
-import { IChat } from '@/shared/types';
+import { IChat } from '@/shared/types/index.ts';
 
 interface IChatHeader {
 	selectedRoom?: IChat;

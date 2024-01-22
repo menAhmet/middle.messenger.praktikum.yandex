@@ -1,13 +1,16 @@
 {
+	"ts-node": {
+		"files": true
+	},
 	"compilerOptions": {
 		"target": "ES6",
 		"useDefineForClassFields": true,
-		"module": "ESNext",
+		"module": "ES6",
 		"lib": ["ES6", "DOM", "DOM.Iterable"],
 		"skipLibCheck": true,
 		"moduleResolution": "bundler",
+		//"esModuleInterop": true,
 		"allowImportingTsExtensions": true,
-		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
 		"noImplicitAny": true,

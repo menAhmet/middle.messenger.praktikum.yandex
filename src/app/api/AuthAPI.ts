@@ -1,4 +1,4 @@
-import { IUser } from '@/shared/types/auth.interface';
+import { IUser } from '@/shared/types/auth.interface.ts';
 import BaseAPI from './BaseAPI';
 import { DataType } from '@/shared/utils/http';
 

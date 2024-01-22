@@ -1,5 +1,5 @@
-import Component from './Component';
-import { render } from './render';
+import Component from './Component.ts';
+import { render } from './render.ts';
 
 const isEqual = (lhs: string, rhs: string): boolean => {
 	return lhs === rhs;

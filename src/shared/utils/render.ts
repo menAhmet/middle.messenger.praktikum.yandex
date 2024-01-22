@@ -1,4 +1,4 @@
-import Component from './Component';
+import Component from './Component.ts';
 
 export const render = (query: string, block: Component) => {
 	const root = document.querySelector(query);

@@ -1,4 +1,4 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './listSearchUser.hbs';
 
 interface IListSearchUser {

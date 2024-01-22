@@ -1,8 +1,8 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './avatarProfile.hbs';
-import UserController from '@/app/controllers/UserController';
-import store, { withStore } from '@/shared/utils/Store';
-import HTTPTransport from '@/shared/utils/http';
+import UserController from '@/app/controllers/UserController.ts';
+import store, { withStore } from '@/shared/utils/Store.ts';
+import HTTPTransport from '@/shared/utils/http.ts';
 
 export class AvatarBase extends Component {
 	constructor() {

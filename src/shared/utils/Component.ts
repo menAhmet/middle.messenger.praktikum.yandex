@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { nanoid } from 'nanoid';
-import { EventBus } from './EventBus';
+import { EventBus } from './EventBus.ts';
 
 export type Props = Record<string | symbol, unknown>;
 export type Children = Record<string, Element | Component>;

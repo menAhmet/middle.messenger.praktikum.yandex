@@ -1,4 +1,4 @@
-import store from '@/shared/utils/Store';
+import store from '@/shared/utils/Store.ts';
 import UAPI from '../api/UserAPI';
 import { UserAPI } from '../api/UserAPI';
 import { DataType } from '@/shared/utils/http';

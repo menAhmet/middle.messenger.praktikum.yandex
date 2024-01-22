@@ -1,6 +1,6 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './chatFooter.hbs';
-import MessageController from '@/app/controllers/MessageController';
+import MessageController from '@/app/controllers/MessageController.ts';
 
 interface IChatFooter {
 	selectedRoom?: number | undefined;
