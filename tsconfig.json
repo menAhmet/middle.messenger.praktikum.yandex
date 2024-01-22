@@ -9,7 +9,6 @@
 		"lib": ["ES6", "DOM", "DOM.Iterable"],
 		"skipLibCheck": true,
 		"moduleResolution": "bundler",
-		//"esModuleInterop": true,
 		"allowImportingTsExtensions": true,
 		"isolatedModules": true,
 		"noEmit": true,
