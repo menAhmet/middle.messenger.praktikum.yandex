@@ -1,4 +1,4 @@
-import { IChat } from '@/shared/types/chat.interface';
+import { IChat } from '@/shared/types/chat.interface.ts';
 import BaseAPI from './BaseAPI';
 import { DataType } from '@/shared/utils/http';
 

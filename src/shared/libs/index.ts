@@ -1,1 +1,1 @@
-export * from './validators/index';
+export * from './validators/index.ts';

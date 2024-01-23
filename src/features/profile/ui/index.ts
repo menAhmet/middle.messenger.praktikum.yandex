@@ -1,3 +1,3 @@
-export * from './profileEditList/index';
-export * from './profileList/index';
-export * from './profilePasswordList/index';
+export * from './profileEditList/index.ts';
+export * from './profileList/index.ts';
+export * from './profilePasswordList/index.ts';

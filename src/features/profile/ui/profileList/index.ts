@@ -1,15 +1,15 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import {
 	validateEmailWithRegx,
 	validateLoginWithRegx,
 	validateNameWithRegx,
 	validatePhoneWithRegx,
-} from '@/shared/libs';
+} from '@/shared/libs/index.ts';
 import template from './profileList.hbs';
-import store, { withStore } from '@/shared/utils/Store';
-import { IUser } from '@/shared/types/auth.interface';
-import UserController from '@/app/controllers/UserController';
-import { serializerFormData } from '@/shared/utils';
+import store, { withStore } from '@/shared/utils/Store.ts';
+import { IUser } from '@/shared/types/auth.interface.ts';
+import UserController from '@/app/controllers/UserController.ts';
+import { serializerFormData } from '@/shared/utils/index.ts';
 
 export class ProfileListBase extends Component {
 	public user: IUser;

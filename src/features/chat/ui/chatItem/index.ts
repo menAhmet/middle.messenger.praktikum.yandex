@@ -1,7 +1,7 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './chatItem.hbs';
-import { IUser } from '@/shared/types/auth.interface';
-import store from '@/shared/utils/Store';
+import { IUser } from '@/shared/types/auth.interface.ts';
+import store from '@/shared/utils/Store.ts';
 
 interface IChatItem {
 	user?: IUser;

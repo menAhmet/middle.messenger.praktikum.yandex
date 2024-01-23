@@ -1,8 +1,8 @@
-import Component from '@/shared/utils/Component';
-import { validatePasswordWithRegx } from '@/shared/libs';
+import Component from '@/shared/utils/Component.ts';
+import { validatePasswordWithRegx } from '@/shared/libs/index.ts';
 import template from './profilePasswordList.hbs';
-import { serializerFormData } from '@/shared/utils';
-import UserController from '@/app/controllers/UserController';
+import { serializerFormData } from '@/shared/utils/index.ts';
+import UserController from '@/app/controllers/UserController.ts';
 
 export class ProfilePasswordList extends Component {
 	constructor() {

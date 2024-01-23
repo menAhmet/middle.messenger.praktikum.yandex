@@ -1,9 +1,9 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './chatDialog.hbs';
-import { validateNameWithRegx } from '@/shared/libs';
-import { serializerFormData } from '@/shared/utils';
-import ChatController from '@/app/controllers/ChatController';
-import store from '@/shared/utils/Store';
+import { validateNameWithRegx } from '@/shared/libs/index.ts';
+import { serializerFormData } from '@/shared/utils/index.ts';
+import ChatController from '@/app/controllers/ChatController.ts';
+import store from '@/shared/utils/Store.ts';
 
 export class ChatDialog extends Component {
 	constructor() {

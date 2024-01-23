@@ -1,7 +1,7 @@
 import CAPI from '../api/ChatAPI';
 import { DataType } from '@/shared/utils/http';
 import { ChatAPI } from '../api/ChatAPI';
-import store from '@/shared/utils/Store';
+import store from '@/shared/utils/Store.ts';
 import MessageController from './MessageController';
 
 class ChatController {

@@ -1,8 +1,11 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './signIn.hbs';
-import { validateLoginWithRegx, validatePasswordWithRegx } from '@/shared/libs';
-import AuthController from '@/app/controllers/AuthController';
-import { serializerFormData } from '@/shared/utils';
+import {
+	validateLoginWithRegx,
+	validatePasswordWithRegx,
+} from '@/shared/libs/index.ts';
+import AuthController from '@/app/controllers/AuthController.ts';
+import { serializerFormData } from '@/shared/utils/index.ts';
 
 export class SignIn extends Component {
 	constructor() {

@@ -1,2 +1,2 @@
-export * from './chat/index';
-export * from './profile/index';
+export * from './chat/index.ts';
+export * from './profile/index.ts';

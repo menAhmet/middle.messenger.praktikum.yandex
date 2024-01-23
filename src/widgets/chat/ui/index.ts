@@ -1,9 +1,9 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import template from './chatLayout.hbs';
-import { validateSearchWithRegx } from '@/shared/libs';
+import { validateSearchWithRegx } from '@/shared/libs/index.ts';
 import { withStore } from '@/shared/utils/Store';
-import ChatController from '@/app/controllers/ChatController';
-import { IUser } from '@/shared/types/auth.interface';
+import ChatController from '@/app/controllers/ChatController.ts';
+import { IUser } from '@/shared/types/auth.interface.ts';
 
 export class ChatLayoutBase extends Component {
 	constructor() {

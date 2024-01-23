@@ -1,4 +1,4 @@
-import Component from '@/shared/utils/Component';
+import Component from '@/shared/utils/Component.ts';
 import { IWithRouter, withRouter } from '@/shared/utils/withRouter';
 import template from './link.hbs';
 

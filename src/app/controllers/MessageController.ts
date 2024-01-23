@@ -1,6 +1,6 @@
-import store from '@/shared/utils/Store';
+import store from '@/shared/utils/Store.ts';
 import WSTransport, { WSTransportEvents } from '@/shared/utils/Socket';
-import { IMessage } from '@/shared/types';
+import { IMessage } from '@/shared/types/index.ts';
 
 class MessagesController {
 	private sockets: Map<number, WSTransport> = new Map();
